@@ -66,10 +66,6 @@ public class adminBarra1 extends Thread {
         double t = 0;
         while (vive) {
             for (int i = 0; i < limite; i++) {
-                barra.setValue(0);
-                while (barra.getValue() <= 100) {
-                    barra.setValue(barra.getValue() + 1);
-                }
                 Carro cr = c.get(i);
                 if (cr.getSize().equals("Pequeño")) {
                     t = 1.5 * cr.getNivelsucio();
@@ -80,7 +76,11 @@ public class adminBarra1 extends Thread {
                 if (cr.getSize().equals("Grande")) {
                     t = 2.2 * cr.getNivelsucio();
                 }
-
+                barra.setValue(0);
+                barra.setMaximum((int) Math.round(t));
+                while (barra.getValue() <= barra.getMaximum()) {
+                    barra.setValue(barra.getValue() + 1);
+                }
                 Object[] o = {
                     cr.getPlaca(),
                     cr.getSize(),

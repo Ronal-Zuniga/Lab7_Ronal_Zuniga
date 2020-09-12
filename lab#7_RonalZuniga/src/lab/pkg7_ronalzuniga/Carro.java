@@ -1,6 +1,9 @@
 
 package lab.pkg7_ronalzuniga;
-public class Carro {
+
+import java.io.Serializable;
+
+public class Carro implements Serializable{
     private int placa;
     private String size;
     private int puertas;
