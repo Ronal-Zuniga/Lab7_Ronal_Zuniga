@@ -17,10 +17,7 @@ public class Principal extends javax.swing.JFrame {
 
     public Principal() {
         initComponents();
-        ab1 = new adminBarra1(pb1,t1,ep.getLavar().size(),ep.getLavar());
-        ab2 = new adminBarra1(pb2,t2,ep2.getLavar().size(),ep2.getLavar());
-        ab3 = new adminBarra1(pb3,t3,ep3.getLavar().size(),ep3.getLavar());
-        
+
     }
 
     @SuppressWarnings("unchecked")
@@ -1106,8 +1103,7 @@ public class Principal extends javax.swing.JFrame {
         placa.setText("");
         puertas.setText("");
         tam.setSelectedIndex(0);
-        JOptionPane.showMessageDialog(this, "Carro agregado correctamente");
-        
+        JOptionPane.showMessageDialog(this, "Carro agregado correctamente");       
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
@@ -1151,6 +1147,12 @@ public class Principal extends javax.swing.JFrame {
         Enombre.setText("");
         Eapellido.setText("");
         JOptionPane.showMessageDialog(this, "Empleado agregado correctamente");
+        ep = (Empleado) em1.getSelectedItem();
+        ep2 = (Empleado) em2.getSelectedItem();
+        ep3 = (Empleado) em3.getSelectedItem();
+        ab1 = new adminBarra1(pb1,t1,ep.getLavar().size(),ep.getLavar());
+        ab2 = new adminBarra1(pb2,t2,ep2.getLavar().size(),ep2.getLavar());
+        ab3 = new adminBarra1(pb3,t3,ep3.getLavar().size(),ep3.getLavar());
     }//GEN-LAST:event_jButton3MouseClicked
 
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
@@ -1300,10 +1302,8 @@ public class Principal extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Principal().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new Principal().setVisible(true);
         });
     }
 
@@ -1415,8 +1415,8 @@ public class Principal extends javax.swing.JFrame {
     private adminBarra1 ab1;
     private adminBarra1 ab2;
     private adminBarra1 ab3;
-    private Empleado ep = (Empleado) em1.getSelectedItem();
-    private Empleado ep2 = (Empleado) em2.getSelectedItem();
-    private Empleado ep3 = (Empleado) em3.getSelectedItem();
-    
+    private Empleado ep;
+    private Empleado ep2;
+    private Empleado ep3;
+    private int l1,l2,l3;
 }

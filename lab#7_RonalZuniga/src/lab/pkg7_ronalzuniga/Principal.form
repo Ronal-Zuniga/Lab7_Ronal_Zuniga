@@ -208,11 +208,6 @@
       </SubComponents>
     </Container>
     <Container class="javax.swing.JDialog" name="addCliente">
-      <Properties>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[650, 544]"/>
-        </Property>
-      </Properties>
 
       <Layout>
         <DimensionLayout dim="0">
